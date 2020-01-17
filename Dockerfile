@@ -1,4 +1,4 @@
-FROM java:jdk
+FROM openjdk:14-jdk-alpine
 
 MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
