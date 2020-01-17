@@ -4,14 +4,14 @@ MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.157/presto-server-0.157.tar.gz \
+ADD https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.230/presto-server-0.230.tar.gz \
     /tmp/presto.tar.gz
 
 RUN mkdir -p /opt/presto &&\
     tar -zxvf /tmp/presto.tar.gz -C /opt/presto &&\
     rm /tmp/presto.tar.gz
 
-ENV HOME /opt/presto/presto-server-0.157
+ENV HOME /opt/presto/presto-server-0.230
 
 WORKDIR $HOME
 
@@ -24,4 +24,4 @@ VOLUME $HOME/data/
 
 EXPOSE 8080
 
-CMD ["/opt/presto/presto-server-0.157/bin/launcher", "run"]
+CMD ["/opt/presto/presto-server-0.230/bin/launcher", "run"]
