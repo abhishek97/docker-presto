@@ -4,6 +4,14 @@ MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip \
+    build-base \
+  && pip install virtualenv \
+  && rm -rf /var/cache/apk/*
+
 ADD https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.230/presto-server-0.230.tar.gz \
     /tmp/presto.tar.gz
 
