@@ -1,4 +1,4 @@
-FROM openjdk:14-jdk-alpine
+FROM openjdk:8u212-jdk-alpine3.9
 
 MAINTAINER Jiayu Liu <etareduce@gmail.com>
 
